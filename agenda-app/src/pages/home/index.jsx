@@ -12,7 +12,7 @@ export const Home = () => {
         <div className="home__header">
           <img src={Favicon} alt="logo" />
           <p>Sua agenda eletrônica</p>
-          <Link to="/adding" className="home__link">
+          <Link to="/contactRegistration" className="home__link">
             Crie um novo contato
           </Link>
         </div>
