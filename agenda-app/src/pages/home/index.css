@@ -25,10 +25,32 @@
   text-align: center;
 }
 
-.home__header a:hover {
+.home__header a:hover,
+.home__btn:hover {
   background-color: var(--focus-color);
   color: var(--body-color);
   border: 1px solid var(--body-color);
+}
+
+.home__btn {
+  background-color: var(--body-color);
+  color: var(--focus-color);
+  border: 1px solid var(--body-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home__header a,
+.home__btn {
+  height: 60px;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .home__table {
@@ -140,5 +162,11 @@
   .home__table-contact {
     width: 100%;
     justify-items: center;
+  }
+
+  .home__header a,
+  .home__btn {
+    width: 20%;
+    height: 60px;
   }
 }

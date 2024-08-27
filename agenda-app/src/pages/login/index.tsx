@@ -21,7 +21,7 @@ export const Login = () => {
         <div className="login__footer">
           <p className="login__footer__text">
             Ainda não possui uma conta?{" "}
-            <Link to="/register">Crie uma agora</Link>
+            <Link to="/sign-up">Crie uma agora</Link>
           </p>
         </div>
       </div>
