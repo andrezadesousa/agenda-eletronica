@@ -13,11 +13,12 @@
 .input {
   font-size: var(--normal-font-size);
   border: none;
-  background-color: var(--body-color);
+  background-color: rgba(248, 140, 112, 0.3);
+  border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   outline: none;
   color: var(--text-color);
-  border-bottom: 1px solid var(--focus-color);
+  border: 1px solid var(--focus-color);
 }
 
 .input::placeholder {

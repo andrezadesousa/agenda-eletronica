@@ -1,0 +1,116 @@
+.register__container {
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+  height: 100vh;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.register__button {
+  background-color: var(--focus-color);
+  color: var(--body-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  transition: 0.3s;
+  width: 400px;
+}
+
+.register__content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.register__infos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.register__title {
+  font-size: var(--h1-font-size);
+  color: var(--body-color);
+  text-align: center;
+}
+
+.register__text {
+  font-size: var(--h3-font-size);
+  color: var(--body-color);
+  text-align: center;
+}
+
+.register__btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: var(--normal-font-size);
+  color: var(--body-color);
+}
+
+.register__btn a {
+  width: auto;
+  background-color: var(--focus-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--body-color);
+}
+
+.register__btn a:hover {
+  opacity: 0.8;
+}
+
+.register__image {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 1150px) {
+  .register__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .register__form {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .register__image,
+  .register__form {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .register__button {
+    width: 700px;
+  }
+
+  .register__btn {
+    flex-direction: row;
+  }
+
+  .register__infos {
+    height: 100%;
+  }
+}
