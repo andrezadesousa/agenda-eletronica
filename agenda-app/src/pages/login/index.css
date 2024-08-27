@@ -1,0 +1,31 @@
+.login__container {
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+}
+
+.login__video {
+  object-fit: cover;
+  object-position: center;
+  height: 400px;
+  width: 100%;
+}
+
+.login__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 1150px) {
+  .login__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .login__video {
+    width: 100%;
+    height: 100vh;
+  }
+}
