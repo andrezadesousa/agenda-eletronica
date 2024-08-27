@@ -5,6 +5,8 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
+  position: fixed;
+  width: 100%;
 }
 
 .home__title {
@@ -29,12 +31,16 @@
   border: 1px solid var(--body-color);
 }
 
+.home__table {
+  padding-block: 8rem 2rem;
+}
+
 .home__table-title {
   text-align: center;
   padding: 1rem;
 }
 
-.table__subtitle {
+.home__table-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,16 +51,70 @@
   align-items: center;
 }
 
-.table__subtitle h1 {
+.home__table-header h1 {
   border-right: 1px solid var(--focus-color);
   width: 100%;
   font-size: var(--h3-font-size);
   text-align: center;
   padding-right: 0.5rem;
+  color: var(--focus-color);
+  font-weight: var(--font-semi-bold);
 }
 
-.table__subtitle h1:last-child {
+.home__table-header h1:last-child {
   border-right: none;
+}
+
+.home__table-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--focus-color);
+}
+
+.home__table-contact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.home__table-contact h1 {
+  font-size: var(--normal-font-size);
+  margin-top: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: horizontal;
+  word-break: break-all;
+}
+
+.home__table-actions {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.delete__btn {
+  background-color: red;
+  border: none;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.update__btn {
+  background-color: var(--focus-color);
+  border: none;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.delete,
+.update {
+  color: var(--body-color);
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 1150px) {
@@ -64,11 +124,21 @@
     gap: 10rem;
   }
 
-  .table__subtitle {
+  .home__table-header {
     width: 100%;
   }
 
-  .table__subtitle h1 {
+  .home__table-header h1 {
     padding: 0;
+  }
+
+  .home__table-body {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .home__table-contact {
+    width: 100%;
+    justify-items: center;
   }
 }

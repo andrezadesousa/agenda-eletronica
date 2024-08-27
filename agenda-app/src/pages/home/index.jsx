@@ -18,11 +18,27 @@ export const Home = () => {
         </div>
         <div className="home__table">
           <h1 className="home__table-title">Agenda Eletrônica</h1>
-          <div className="table__subtitle">
+          <div className="home__table-header">
             <h1>Nome</h1>
             <h1>Endereço</h1>
             <h1>Telefone</h1>
             <h1>E-mail</h1>
+          </div>
+          <div className="home__table-body">
+            <div className="home__table-contact">
+              <h1>Raian Lot</h1>
+              <h1>Av. Paulista</h1>
+              <h1>(11) 99999-9999</h1>
+              <h1>5oA0D@example.com</h1>
+            </div>
+            <div className="home__table-actions">
+              <button className="delete__btn">
+                <i className="ri-delete-bin-line delete"></i>
+              </button>
+              <button className="update__btn">
+                <i className="ri-pencil-line update"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
