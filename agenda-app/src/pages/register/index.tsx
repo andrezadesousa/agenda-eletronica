@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./index.css";
 
 import Favicon from "../../assets/icon/favicon.svg";
 import RegisterImage from "../../assets/images/register.jpg";
 
-import "./index.css";
 import { Input } from "../../components/input";
 export const Register = () => {
   return (

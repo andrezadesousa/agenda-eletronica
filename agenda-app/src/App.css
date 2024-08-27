@@ -5,9 +5,11 @@
 
   --body-font: "Playwrite DE Grund", cursive;
 
+  /* --body-color: #fef6ef; */
   --body-color: rgba(255, 255, 255, 1);
-  --text-color: rgba(0, 0, 0, 0.9);
+  --text-color: #424242;
   --text-color-light: hsl(0, 0%, 64%);
+  /* --focus-color: #fce2ce; */
   --focus-color: #f88c70;
 
   --biggest-font-size: 2.5rem;
