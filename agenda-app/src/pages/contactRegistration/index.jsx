@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import VideoHome from "../../assets/videos/loginVideo.mp4";
 
 import AvatarImage from "../../assets/images/avatar.png";
 import { Input } from "../../components/input";
@@ -29,11 +30,11 @@ export const AddContact = () => {
           <button className="addContact__button">Cadastrar</button>
         </div>
         <div className="addContact__content">
-          <img src={AvatarImage} alt="avatar" className="addContact__image" />
           <h1 className="addContact__title">Cadastrando um novo contato</h1>
           <p className="addContact__text">
             E aproveite as vantagens de ter uma agenda eletrônica
           </p>
+          <img src={AvatarImage} alt="avatar" className="addContact__image" />
         </div>
       </div>
     </section>

@@ -1,3 +1,7 @@
+.addContact__section {
+  background-color: #fef6ef;
+}
+
 .addContact__header {
   background-color: var(--focus-color);
   display: flex;
@@ -26,7 +30,7 @@
 }
 
 .addContact__header a {
-  height: 60px;
+  height: 76px;
   display: flex;
   justify-items: center;
   justify-content: center;
@@ -35,7 +39,54 @@
 }
 
 .addContact__container {
-  padding-block: 8rem 2rem;
+  padding-block: 10rem 2rem;
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+  height: 100vh;
+}
+
+.addContact__form {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addContact__content {
+  background-color: #fce2ce;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.addContact__content p {
+  text-align: center;
+}
+
+.addContact__button {
+  width: 60%;
+  border: none;
+  height: 30px;
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: var(--focus-color);
+  color: var(--body-color);
+  border-radius: 0.5rem;
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addContact__button:hover {
+  opacity: 0.8;
 }
 
 @media screen and (min-width: 1150px) {
@@ -48,5 +99,21 @@
   .addContact__header a {
     width: 20%;
     height: 60px;
+  }
+
+  .addContact__container {
+    grid-template-columns: repeat(2, 1fr);
+    padding-block: 6.6rem 0;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .addContact__content {
+    height: 100vh;
+  }
+
+  .addContact__button {
+    width: 100%;
   }
 }
