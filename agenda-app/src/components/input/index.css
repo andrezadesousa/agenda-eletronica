@@ -15,12 +15,23 @@
   border: none;
   background-color: var(--body-color);
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--focus-color);
   outline: none;
   color: var(--text-color);
+  border-bottom: 1px solid var(--focus-color);
 }
 
 .input::placeholder {
   color: var(--text-color);
+}
+
+@media screen and (max-width: 1150px) {
+  .input {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1152px) {
+  .input {
+    width: 700px;
+  }
 }

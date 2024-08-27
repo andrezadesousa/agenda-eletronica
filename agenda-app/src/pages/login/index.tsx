@@ -3,16 +3,27 @@ import "./index.css";
 import VideoHome from "../../assets/videos/loginVideo.mp4";
 import { Title } from "../../components/title";
 import { Input } from "../../components/input";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   return (
     <div className="login__container">
       <video className="login__video" src={VideoHome} autoPlay loop muted />
       <div className="login__content">
-        <Title title="Login" />
+        <Title title="Faça seu login" />
+        <p className="login__text">
+          Olá, essa será sua agenda eletrônica, onde poderá gerenciar seus
+          contatos de forma dinamica.{" "}
+        </p>
         <Input title="Seu email" placeholder="Email" type="email" />
         <Input title="Sua senha" placeholder="Senha" type="password" />
         <button className="login__button">Entrar</button>
+        <div className="login__footer">
+          <p className="login__footer__text">
+            Ainda não possui uma conta?{" "}
+            <Link to="/register">Crie uma agora</Link>
+          </p>
+        </div>
       </div>
     </div>
   );
