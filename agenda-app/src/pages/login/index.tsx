@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 import VideoHome from "../../assets/videos/loginVideo.mp4";
 import { Title } from "../../components/title";
+import { Input } from "../../components/input";
 
 export const Login = () => {
   return (
@@ -9,14 +10,8 @@ export const Login = () => {
       <video className="login__video" src={VideoHome} autoPlay loop muted />
       <div className="login__content">
         <Title title="Login" />
-        <div className="login__input">
-          <p>Seu email</p>
-          <input type="email" placeholder="Email" />
-        </div>
-        <div className="login__input">
-          <p>Sua senha</p>
-          <input type="password" placeholder="Senha" />
-        </div>
+        <Input title="Seu email" placeholder="Email" type="email" />
+        <Input title="Sua senha" placeholder="Senha" type="password" />
         <button className="login__button">Entrar</button>
       </div>
     </div>

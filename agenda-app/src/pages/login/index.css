@@ -19,6 +19,21 @@
   gap: 2rem;
 }
 
+.login__button {
+  background-color: var(--focus-color);
+  color: var(--body-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login__button:hover {
+  opacity: 0.8;
+}
+
 @media screen and (min-width: 1150px) {
   .login__container {
     grid-template-columns: repeat(2, 1fr);

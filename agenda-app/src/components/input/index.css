@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.title__input {
+  font-size: var(--h2-font-size);
+}
+
+.input {
+  font-size: var(--normal-font-size);
+  border: none;
+  background-color: var(--body-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--focus-color);
+  outline: none;
+  color: var(--text-color);
+}
+
+.input::placeholder {
+  color: var(--text-color);
+}
