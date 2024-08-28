@@ -1,4 +1,4 @@
-.button__pink {
+.pink__button {
   background-color: var(--focus-color);
   color: var(--body-color);
   border: none;
@@ -7,15 +7,10 @@
   font-size: var(--normal-font-size);
   cursor: pointer;
   transition: 0.3s;
-  width: 400px;
+  width: 100%;
+  max-width: 340px;
 }
 
-.button__pink:hover {
+.pink__button:hover {
   opacity: 0.8;
-}
-
-@media screen and (min-width: 1150px) {
-  .button__pink {
-    width: 700px;
-  }
 }

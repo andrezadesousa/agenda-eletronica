@@ -4,7 +4,7 @@ import VideoHome from "../../assets/videos/loginVideo.mp4";
 import { Title } from "../../components/title";
 import { Input } from "../../components/input";
 import { Link } from "react-router-dom";
-import { ButtonPink } from "../../components/buttonPink";
+import { PinkButton } from "../../components/pinkButton";
 
 export const Login = () => {
   return (
@@ -17,18 +17,20 @@ export const Login = () => {
           contatos de forma dinamica.{" "}
         </p>
         <Input
-          title="Seu email"
-          placeholder="Email"
-          type="email"
-          icon="ri-mail-line"
+          title="Nome"
+          placeholder="Nome"
+          type="text"
+          icon="ri-user-line"
+          id="name"
         />
         <Input
           title="Sua senha"
           placeholder="Senha"
           type="password"
           icon="ri-lock-line"
+          id="password"
         />
-        <ButtonPink title="Entrar" onSubmit={() => {}} />
+        <PinkButton title="Entrar" onSubmit={() => {}} />
         <div className="login__footer">
           <p className="login__footer__text">
             Ainda não possui uma conta?{" "}

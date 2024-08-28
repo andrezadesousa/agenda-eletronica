@@ -6,7 +6,7 @@ import { Input } from "../../components/input";
 
 import Favicon from "../../assets/icon/icon.svg";
 import { Link } from "react-router-dom";
-import { ButtonPink } from "../../components/buttonPink";
+import { PinkButton } from "../../components/pinkButton";
 
 export const AddContact = () => {
   return (
@@ -28,26 +28,30 @@ export const AddContact = () => {
             placeholder="Nome"
             type="text"
             icon="ri-user-line"
+            id="name"
           />
           <Input
             title="Endereço"
             placeholder="Endereço"
             type="text"
             icon="ri-map-pin-line"
+            id="address"
           />
           <Input
             title="Telefone"
             placeholder="Telefone"
             type="text"
             icon="ri-phone-line"
+            id="phone"
           />
           <Input
             title="E-mail"
             placeholder="E-mail"
             type="email"
             icon="ri-mail-line"
+            id="email"
           />
-          <ButtonPink title="Cadastrar" onSubmit={() => {}} />
+          <PinkButton title="Cadastrar" onSubmit={() => {}} />
         </div>
         <div className="addContact__content">
           <h1 className="addContact__title">Cadastrando um novo contato</h1>

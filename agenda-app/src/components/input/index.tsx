@@ -6,6 +6,7 @@ type InputTextProps = {
   placeholder: string;
   type: string;
   icon?: string;
+  id: string;
 };
 
 export const Input = ({ title, placeholder, type, icon }: InputTextProps) => {
