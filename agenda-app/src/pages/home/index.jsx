@@ -39,9 +39,9 @@ export const Home = () => {
               <button className="delete__btn">
                 <i className="ri-delete-bin-line delete"></i>
               </button>
-              <button className="update__btn">
+              <Link to={"/criar-contato"} className="update__btn">
                 <i className="ri-pencil-line update"></i>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
