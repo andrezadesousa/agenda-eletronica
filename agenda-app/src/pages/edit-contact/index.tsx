@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-import AvatarImage from "../../assets/images/avatar.png";
+import AvatarImage from "../../assets/images/boy-yellow-headphones.png";
 import { Input } from "../../components/input";
 
 import Favicon from "../../assets/icon/icon.svg";
@@ -23,6 +23,13 @@ export const EditContact = () => {
         </Link>
       </div>
       <div className="editContact__container">
+        <div className="editContact__content">
+          <h1 className="editContact__title">Editando contato da lista?</h1>
+          <p className="editContact__text">
+            Ao finalizar, aproveite as vantagens de ter uma agenda eletrônica
+          </p>
+          <img src={AvatarImage} alt="avatar" className="editContact__image" />
+        </div>
         <div className="editContact__form">
           <Form id="form-contact">
             <Input
@@ -55,13 +62,6 @@ export const EditContact = () => {
             />
           </Form>
           <PinkButton title="Atualizar" onClick={() => {}} />
-        </div>
-        <div className="editContact__content">
-          <h1 className="editContact__title">Editando contato da lista</h1>
-          <p className="editContact__text">
-            Agora, aproveite as vantagens de ter uma agenda eletrônica
-          </p>
-          <img src={AvatarImage} alt="avatar" className="editContact__image" />
         </div>
       </div>
     </section>

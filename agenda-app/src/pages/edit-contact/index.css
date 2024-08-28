@@ -39,11 +39,10 @@
 }
 
 .editContact__container {
-  padding-block: 10rem 2rem;
+  padding-block: 6.6rem 2rem;
   display: grid;
   width: 100%;
   gap: 2rem;
-  height: 100vh;
 }
 
 .editContact__form {
@@ -66,6 +65,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding-top: 2rem;
 }
 
 .editContact__content p {
@@ -89,6 +89,7 @@
     padding-block: 6.6rem 0;
     align-content: center;
     align-items: center;
+    height: 100vh;
   }
 
   .editContact__content {

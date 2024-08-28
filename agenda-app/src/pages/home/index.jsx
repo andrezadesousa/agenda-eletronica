@@ -4,7 +4,7 @@ import "./index.css";
 
 import Favicon from "../../assets/icon/icon.svg";
 import { Link } from "react-router-dom";
-import AvatarImage from "../../assets/images/avatarNewContact.png";
+import AvatarImage from "../../assets/images/boy-yellow-headphones.png";
 export const Home = () => {
   return (
     <section className="home__section">

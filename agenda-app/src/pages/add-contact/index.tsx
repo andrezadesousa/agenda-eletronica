@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-import AvatarImage from "../../assets/images/avatar.png";
+import AvatarImage from "../../assets/images/boy-white-headphones.png";
 import { Input } from "../../components/input";
 
 import Favicon from "../../assets/icon/icon.svg";
@@ -57,9 +57,9 @@ export const AddContact = () => {
           <PinkButton title="Cadastrar" onClick={() => {}} />
         </div>
         <div className="addContact__content">
-          <h1 className="addContact__title">Cadastrando um novo contato</h1>
+          <h1 className="addContact__title">Cadastrando um novo contato?</h1>
           <p className="addContact__text">
-            E aproveite as vantagens de ter uma agenda eletrônica
+            Depois, aproveite as vantagens de ter uma agenda eletrônica!
           </p>
           <img src={AvatarImage} alt="avatar" className="addContact__image" />
         </div>

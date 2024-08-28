@@ -43,7 +43,6 @@
   display: grid;
   width: 100%;
   gap: 2rem;
-  height: 100vh;
 }
 
 .addContact__form {
@@ -89,6 +88,7 @@
     padding-block: 6.6rem 0;
     align-content: center;
     align-items: center;
+    height: 100vh;
   }
 
   .addContact__content {
