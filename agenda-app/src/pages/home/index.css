@@ -177,9 +177,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40%;
-  height: 40%;
-  opacity: 50%;
+  opacity: 30%;
   background-color: #fce2ce;
   border-radius: 50%;
 }
