@@ -1,4 +1,5 @@
-const model = require("../models/post");
+const ContactModel = require("../models/contact");
+const UserModel = require("../models/user");
 
 const agendaController = {
   async show(req, res) {
@@ -7,8 +8,16 @@ const agendaController = {
   },
 
   async createUser(req, res) {
-    const user = await model.create(req.body);
-    return res.json(user);
+    try {
+      const { email, password } = req.body;
+      const newUser = await UserModel.create({ email, password });
+      return res.json({
+        newUser,
+        message: "Usuário criado com sucesso!",
+      });
+    } catch (error) {
+      console.log(error);
+    }
   },
 
   async listContact(req, res) {

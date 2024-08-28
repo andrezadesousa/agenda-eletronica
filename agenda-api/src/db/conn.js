@@ -1,19 +1,26 @@
+import { MongoClient, ServerApiVersion } from "mongodb";
 
-const { MongoClient } = require("mongodb");
-const connectionString = process.env.ATLAS_URI;
-const client = new MongoClient(connectionString, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+const uri =
+  "mongodb+srv://andrezanascimentodesousa:p4rWhCFcJhSAloJY@agenda.xdhcl.mongodb.net/?retryWrites=true&w=majority&appName=agenda";
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+    useUnifiedTopology: true,
+  },
 });
 
-let dbConnection;
+try {
+  // Connect the client to the server
+  await client.connect();
+  // Send a ping to confirm a successful connection
+  await client.db("admin").command({ ping: 1 });
+  console.log("Pinged your deployment. You successfully connected to MongoDB!");
+} catch (err) {
+  console.error(err);
+}
 
-module.exports = {
-  connectToServer: function (callback) {
-    // Implement Database connection
-  },
+let db = client.db("employees");
 
-  getDb: function () {
-    return dbConnection;
-  },
-};
+export default db;

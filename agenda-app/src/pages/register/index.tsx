@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
@@ -7,19 +7,42 @@ import RegisterImage from "../../assets/images/register.jpg";
 
 import { Input } from "../../components/input";
 import { PinkButton } from "../../components/pinkButton";
-import { Form } from "../../components/form";
+import axios from "axios";
+
 export const Register = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const setClear = () => {
+    setEmail("");
+    setPassword("");
+  };
+
+  const handleSignUp = async () => {
+    try {
+      await axios.post("http://localhost:5050/", {
+        email,
+        password,
+      });
+      setClear();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="register__container">
       <div className="register__form">
         <img src={Favicon} alt="logo" />
-        <Form id="form-register">
+        <form className="form" id="form-register">
           <Input
             title="E-mail"
             placeholder="email@gmail.com"
             type="email"
             icon="ri-mail-line"
             id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <Input
             title="Sua senha"
@@ -27,9 +50,11 @@ export const Register = () => {
             type="password"
             icon="ri-lock-line"
             id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
-        </Form>
-        <PinkButton title="Cadastrar" onClick={() => {}} />
+        </form>
+        <PinkButton title="Cadastrar" onClick={() => handleSignUp()} />
       </div>
       <div className="register__content">
         <div className="register__infos">
