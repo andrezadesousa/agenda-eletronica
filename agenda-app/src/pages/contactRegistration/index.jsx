@@ -7,6 +7,7 @@ import { Input } from "../../components/input";
 import Favicon from "../../assets/icon/icon.svg";
 import { Link } from "react-router-dom";
 import { PinkButton } from "../../components/pinkButton";
+import { Form } from "../../components/form";
 
 export const AddContact = () => {
   return (
@@ -23,34 +24,36 @@ export const AddContact = () => {
       </div>
       <div className="addContact__container">
         <div className="addContact__form">
-          <Input
-            title="Nome"
-            placeholder="Seu nome"
-            type="text"
-            icon="ri-user-line"
-            id="name"
-          />
-          <Input
-            title="Endereço"
-            placeholder="Av Paulista"
-            type="text"
-            icon="ri-map-pin-line"
-            id="address"
-          />
-          <Input
-            title="Telefone"
-            placeholder="11 99999-9999"
-            type="text"
-            icon="ri-phone-line"
-            id="phone"
-          />
-          <Input
-            title="E-mail"
-            placeholder="email@gmail.com"
-            type="email"
-            icon="ri-mail-line"
-            id="email"
-          />
+          <Form id="form-contact">
+            <Input
+              title="Nome"
+              placeholder="Seu nome"
+              type="text"
+              icon="ri-user-line"
+              id="name"
+            />
+            <Input
+              title="Endereço"
+              placeholder="Av Paulista"
+              type="text"
+              icon="ri-map-pin-line"
+              id="address"
+            />
+            <Input
+              title="Telefone"
+              placeholder="11 99999-9999"
+              type="text"
+              icon="ri-phone-line"
+              id="phone"
+            />
+            <Input
+              title="E-mail"
+              placeholder="email@gmail.com"
+              type="email"
+              icon="ri-mail-line"
+              id="email"
+            />
+          </Form>
           <PinkButton title="Cadastrar" onSubmit={() => {}} />
         </div>
         <div className="addContact__content">

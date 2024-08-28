@@ -3,12 +3,12 @@ import "./index.css";
 
 type PinkButtonProps = {
   title: string;
-  onSubmit?: (event: React.FormEvent<HTMLButtonElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-export const PinkButton = ({ title, onSubmit, ...props }: PinkButtonProps) => {
+export const PinkButton = ({ title, onClick, ...props }: PinkButtonProps) => {
   return (
-    <button type="submit" onSubmit={onSubmit} className="pink__button">
+    <button type="submit" onClick={onClick} className="pink__button">
       {title}
     </button>
   );

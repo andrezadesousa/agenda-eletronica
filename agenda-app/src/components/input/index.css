@@ -1,10 +1,6 @@
-.form {
-  width: 100%;
-  max-width: 340px;
-}
-
 .form__field {
   position: relative;
+  margin-top: 1rem;
 }
 
 .form__input {

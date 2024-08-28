@@ -7,26 +7,29 @@ import RegisterImage from "../../assets/images/register.jpg";
 
 import { Input } from "../../components/input";
 import { PinkButton } from "../../components/pinkButton";
+import { Form } from "../../components/form";
 export const Register = () => {
   return (
     <div className="register__container">
       <div className="register__form">
         <img src={Favicon} alt="logo" />
-        <Input
-          title="E-mail"
-          placeholder="email@gmail.com"
-          type="email"
-          icon="ri-mail-line"
-          id="email"
-        />
-        <Input
-          title="Sua senha"
-          placeholder="Digite a senha"
-          type="password"
-          icon="ri-lock-line"
-          id="password"
-        />
-        <PinkButton title="Cadastrar" onSubmit={() => {}} />
+        <Form id="form-register">
+          <Input
+            title="E-mail"
+            placeholder="email@gmail.com"
+            type="email"
+            icon="ri-mail-line"
+            id="email"
+          />
+          <Input
+            title="Sua senha"
+            placeholder="Digite a senha"
+            type="password"
+            icon="ri-lock-line"
+            id="password"
+          />
+        </Form>
+        <PinkButton title="Cadastrar" onClick={() => {}} />
       </div>
       <div className="register__content">
         <div className="register__infos">
