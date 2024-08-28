@@ -14,7 +14,9 @@ export const Home = () => {
           <Link to="/criar-contato" className="home__link">
             Crie um novo contato
           </Link>
-          <button className="home__btn">Sair</button>
+          <Link to="/" className="home__link">
+            Sair
+          </Link>
         </div>
         <div className="home__table">
           <h1 className="home__table-title">Agenda Eletrônica</h1>

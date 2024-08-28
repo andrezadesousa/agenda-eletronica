@@ -27,7 +27,7 @@ export const AddContact = () => {
           <Input title="Endereço" placeholder="Endereço" type="text" />
           <Input title="Telefone" placeholder="Telefone" type="text" />
           <Input title="E-mail" placeholder="E-mail" type="email" />
-          <button className="addContact__button">Cadastrar</button>
+          <button className="login__button">Cadastrar</button>
         </div>
         <div className="addContact__content">
           <h1 className="addContact__title">Cadastrando um novo contato</h1>
