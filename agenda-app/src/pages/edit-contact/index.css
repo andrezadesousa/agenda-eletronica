@@ -1,0 +1,101 @@
+.editContact__section {
+  background-color: var(--body-color);
+}
+
+.editContact__header {
+  background-color: var(--focus-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+}
+
+.editContact__header a {
+  font-size: var(--normal-font-size);
+  width: auto;
+  background-color: var(--body-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--focus-color);
+  text-align: center;
+}
+
+.editContact__header a:hover {
+  background-color: var(--focus-color);
+  color: var(--body-color);
+  border: 1px solid var(--body-color);
+}
+
+.editContact__header a {
+  height: 76px;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.editContact__container {
+  padding-block: 10rem 2rem;
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+  height: 100vh;
+}
+
+.editContact__form {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.editContact__form button {
+  margin-top: 1rem;
+}
+
+.editContact__content {
+  background-color: #fce2ce;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.editContact__content p {
+  text-align: center;
+}
+
+@media screen and (min-width: 1150px) {
+  .editContact__header {
+    padding: 1rem 3rem;
+    justify-content: center;
+    gap: 10rem;
+  }
+
+  .editContact__header a {
+    width: 20%;
+    height: 60px;
+  }
+
+  .editContact__container {
+    grid-template-columns: repeat(2, 1fr);
+    padding-block: 6.6rem 0;
+    align-content: center;
+    align-items: center;
+  }
+
+  .editContact__content {
+    height: 100vh;
+  }
+
+  .editContact__button {
+    width: 100%;
+  }
+}

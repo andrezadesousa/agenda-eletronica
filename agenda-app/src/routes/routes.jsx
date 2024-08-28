@@ -4,7 +4,8 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { Login } from "../pages/login";
 import { Register } from "../pages/register";
 import { Home } from "../pages/home";
-import { AddContact } from "../pages/contactRegistration";
+import { AddContact } from "../pages/add-contact";
+import { EditContact } from "../pages/edit-contact";
 
 const RouterApp = () => {
   return (
@@ -14,6 +15,7 @@ const RouterApp = () => {
         <Route path="/sign-up" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="/criar-contato" element={<AddContact />} />
+        <Route path="/editar-contato" element={<EditContact />} />
       </Routes>
     </BrowserRouter>
   );

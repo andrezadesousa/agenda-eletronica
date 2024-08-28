@@ -39,7 +39,7 @@ export const Home = () => {
               <button className="delete__btn">
                 <i className="ri-delete-bin-line delete"></i>
               </button>
-              <Link to={"/criar-contato"} className="update__btn">
+              <Link to={"/editar-contato"} className="update__btn">
                 <i className="ri-pencil-line update"></i>
               </Link>
             </div>
