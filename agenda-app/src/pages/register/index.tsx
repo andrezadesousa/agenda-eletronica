@@ -13,15 +13,15 @@ export const Register = () => {
       <div className="register__form">
         <img src={Favicon} alt="logo" />
         <Input
-          title="Seu email"
-          placeholder="Email"
+          title="E-mail"
+          placeholder="email@gmail.com"
           type="email"
           icon="ri-mail-line"
           id="email"
         />
         <Input
           title="Sua senha"
-          placeholder="Senha"
+          placeholder="Digite a senha"
           type="password"
           icon="ri-lock-line"
           id="password"

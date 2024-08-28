@@ -25,28 +25,28 @@ export const AddContact = () => {
         <div className="addContact__form">
           <Input
             title="Nome"
-            placeholder="Nome"
+            placeholder="Seu nome"
             type="text"
             icon="ri-user-line"
             id="name"
           />
           <Input
             title="Endereço"
-            placeholder="Endereço"
+            placeholder="Av Paulista"
             type="text"
             icon="ri-map-pin-line"
             id="address"
           />
           <Input
             title="Telefone"
-            placeholder="Telefone"
+            placeholder="11 99999-9999"
             type="text"
             icon="ri-phone-line"
             id="phone"
           />
           <Input
             title="E-mail"
-            placeholder="E-mail"
+            placeholder="email@gmail.com"
             type="email"
             icon="ri-mail-line"
             id="email"

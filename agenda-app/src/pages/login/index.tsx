@@ -17,15 +17,15 @@ export const Login = () => {
           contatos de forma dinamica.{" "}
         </p>
         <Input
-          title="Nome"
-          placeholder="Nome"
-          type="text"
-          icon="ri-user-line"
-          id="name"
+          title="E-mail"
+          placeholder="email@gmail.com"
+          type="email"
+          icon="ri-mail-line"
+          id="email"
         />
         <Input
           title="Sua senha"
-          placeholder="Senha"
+          placeholder="Digite a senha"
           type="password"
           icon="ri-lock-line"
           id="password"

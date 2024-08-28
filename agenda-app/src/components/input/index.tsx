@@ -11,7 +11,7 @@ type InputTextProps = {
 
 export const Input = ({ title, placeholder, type, icon }: InputTextProps) => {
   return (
-    <form action="" className="form" id="form">
+    <form action="" className="form">
       <div className="form__field">
         <label htmlFor="email" className="form__label">
           {title}
