@@ -7,7 +7,7 @@
   width: 100%;
   border: 1px solid var(--focus-color);
   padding: 1.4rem 1.4rem 1.4rem 4.5rem;
-  border-radius: 4rem;
+  border-radius: 0.5rem;
   outline: none;
   font-weight: 500;
   transition: focus-color 0.4s, box-shadow 0.4s;

@@ -54,7 +54,7 @@ export const AddContact = () => {
               id="email"
             />
           </Form>
-          <PinkButton title="Cadastrar" onSubmit={() => {}} />
+          <PinkButton title="Cadastrar" onClick={() => {}} />
         </div>
         <div className="addContact__content">
           <h1 className="addContact__title">Cadastrando um novo contato</h1>
