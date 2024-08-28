@@ -5,13 +5,25 @@ type InputTextProps = {
   title: string;
   placeholder: string;
   type: string;
+  icon?: string;
 };
 
-export const Input = ({ title, placeholder, type }: InputTextProps) => {
+export const Input = ({ title, placeholder, type, icon }: InputTextProps) => {
   return (
-    <div className="container">
-      <h1 className="title__input">{title}</h1>
-      <input className="input" type={type} placeholder={placeholder}></input>
-    </div>
+    <form action="" className="form" id="form">
+      <div className="form__field">
+        <label htmlFor="email" className="form__label">
+          {title}
+        </label>
+        <input
+          type={type}
+          placeholder={placeholder}
+          required
+          id={type}
+          className="form__input"
+        ></input>
+        <i className={`form__icon ${icon}`}></i>
+      </div>
+    </form>
   );
 };

@@ -23,10 +23,30 @@ export const AddContact = () => {
       </div>
       <div className="addContact__container">
         <div className="addContact__form">
-          <Input title="Nome" placeholder="Nome" type="text" />
-          <Input title="Endereço" placeholder="Endereço" type="text" />
-          <Input title="Telefone" placeholder="Telefone" type="text" />
-          <Input title="E-mail" placeholder="E-mail" type="email" />
+          <Input
+            title="Nome"
+            placeholder="Nome"
+            type="text"
+            icon="ri-user-line"
+          />
+          <Input
+            title="Endereço"
+            placeholder="Endereço"
+            type="text"
+            icon="ri-map-pin-line"
+          />
+          <Input
+            title="Telefone"
+            placeholder="Telefone"
+            type="text"
+            icon="ri-phone-line"
+          />
+          <Input
+            title="E-mail"
+            placeholder="E-mail"
+            type="email"
+            icon="ri-mail-line"
+          />
           <ButtonPink title="Cadastrar" onSubmit={() => {}} />
         </div>
         <div className="addContact__content">

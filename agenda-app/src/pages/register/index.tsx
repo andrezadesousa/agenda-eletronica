@@ -12,8 +12,18 @@ export const Register = () => {
     <div className="register__container">
       <div className="register__form">
         <img src={Favicon} alt="logo" />
-        <Input title="Seu email" placeholder="Email" type="email" />
-        <Input title="Sua senha" placeholder="Senha" type="password" />
+        <Input
+          title="Seu email"
+          placeholder="Email"
+          type="email"
+          icon="ri-mail-line"
+        />
+        <Input
+          title="Sua senha"
+          placeholder="Senha"
+          type="password"
+          icon="ri-lock-line"
+        />
         <ButtonPink title="Cadastrar" onSubmit={() => {}} />
       </div>
       <div className="register__content">

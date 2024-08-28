@@ -16,8 +16,18 @@ export const Login = () => {
           Olá, essa será sua agenda eletrônica, onde poderá gerenciar seus
           contatos de forma dinamica.{" "}
         </p>
-        <Input title="Seu email" placeholder="Email" type="email" />
-        <Input title="Sua senha" placeholder="Senha" type="password" />
+        <Input
+          title="Seu email"
+          placeholder="Email"
+          type="email"
+          icon="ri-mail-line"
+        />
+        <Input
+          title="Sua senha"
+          placeholder="Senha"
+          type="password"
+          icon="ri-lock-line"
+        />
         <ButtonPink title="Entrar" onSubmit={() => {}} />
         <div className="login__footer">
           <p className="login__footer__text">
