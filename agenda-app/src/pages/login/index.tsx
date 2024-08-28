@@ -4,6 +4,7 @@ import VideoHome from "../../assets/videos/loginVideo.mp4";
 import { Title } from "../../components/title";
 import { Input } from "../../components/input";
 import { Link } from "react-router-dom";
+import { ButtonPink } from "../../components/buttonPink";
 
 export const Login = () => {
   return (
@@ -17,7 +18,7 @@ export const Login = () => {
         </p>
         <Input title="Seu email" placeholder="Email" type="email" />
         <Input title="Sua senha" placeholder="Senha" type="password" />
-        <button className="login__button">Entrar</button>
+        <ButtonPink title="Entrar" onSubmit={() => {}} />
         <div className="login__footer">
           <p className="login__footer__text">
             Ainda não possui uma conta?{" "}

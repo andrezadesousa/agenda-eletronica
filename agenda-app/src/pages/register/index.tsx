@@ -6,6 +6,7 @@ import Favicon from "../../assets/icon/favicon.svg";
 import RegisterImage from "../../assets/images/register.jpg";
 
 import { Input } from "../../components/input";
+import { ButtonPink } from "../../components/buttonPink";
 export const Register = () => {
   return (
     <div className="register__container">
@@ -13,7 +14,7 @@ export const Register = () => {
         <img src={Favicon} alt="logo" />
         <Input title="Seu email" placeholder="Email" type="email" />
         <Input title="Sua senha" placeholder="Senha" type="password" />
-        <button className="register__button">Cadastrar</button>
+        <ButtonPink title="Cadastrar" onSubmit={() => {}} />
       </div>
       <div className="register__content">
         <div className="register__infos">

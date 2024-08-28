@@ -1,12 +1,12 @@
 import React from "react";
 import "./index.css";
-import VideoHome from "../../assets/videos/loginVideo.mp4";
 
 import AvatarImage from "../../assets/images/avatar.png";
 import { Input } from "../../components/input";
 
 import Favicon from "../../assets/icon/icon.svg";
 import { Link } from "react-router-dom";
+import { ButtonPink } from "../../components/buttonPink";
 
 export const AddContact = () => {
   return (
@@ -27,7 +27,7 @@ export const AddContact = () => {
           <Input title="Endereço" placeholder="Endereço" type="text" />
           <Input title="Telefone" placeholder="Telefone" type="text" />
           <Input title="E-mail" placeholder="E-mail" type="email" />
-          <button className="login__button">Cadastrar</button>
+          <ButtonPink title="Cadastrar" onSubmit={() => {}} />
         </div>
         <div className="addContact__content">
           <h1 className="addContact__title">Cadastrando um novo contato</h1>
