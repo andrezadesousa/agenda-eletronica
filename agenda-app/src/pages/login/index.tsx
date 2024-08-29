@@ -11,11 +11,7 @@ import { useNavigate } from "react-router-dom";
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const navigate = useNavigate();
-
-  // navigation do react por url e state
-  //localStorage um bd no front
 
   const handleSingIn = async () => {
     if (email === "" || password === "") {

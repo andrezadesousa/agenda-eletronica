@@ -3,13 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./index.css";
 
 import Favicon from "../../assets/icon/icon.svg";
-import {
-  Link,
-  Navigate,
-  useLocation,
-  useNavigate,
-  useParams,
-} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import AvatarImage from "../../assets/images/boy-yellow-headphones.png";
 
 import axios from "axios";

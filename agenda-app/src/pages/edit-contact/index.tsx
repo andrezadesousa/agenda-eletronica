@@ -5,12 +5,7 @@ import AvatarImage from "../../assets/images/boy-yellow-headphones.png";
 import { Input } from "../../components/input";
 
 import Favicon from "../../assets/icon/icon.svg";
-import {
-  Link,
-  useNavigate,
-  useParams,
-  useSearchParams,
-} from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { PinkButton } from "../../components/pinkButton";
 import { Form } from "../../components/form";
 import axios from "axios";
