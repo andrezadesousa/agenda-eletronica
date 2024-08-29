@@ -20,11 +20,22 @@ Para esse projeto eu estou utilizando as seguintes tecnologias:
 
 - Clonar o repo;
 - Abrir o terminal de backend e frontend;
-- Rodar NPM install dos dois.
+- Rodar NPM install dos dois;
+- npm i dotenv;
+- npm i nodemon
 
 ## 💻 Como rodar o app versão Docker?
 
 - Adicionar o arquivo .env na raiz do projeto;
 - No terminal do backend rodar o comando docker compose up (criar o docker)
 
-  <img src="https://github.com/andrezadesousa/andreza-portfolio/blob/master/src/images/portfolio.png?raw=true" />
+
+https://github.com/user-attachments/assets/5a9ef1c8-ae05-4798-af29-c4778bd38dd3
+
+https://github.com/user-attachments/assets/82664bf4-1d03-4d73-b7b2-cfaab359070e
+
+https://github.com/user-attachments/assets/496f126b-2717-4322-8459-6be59ae01ca1
+
+
+
+
