@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./index.css";
 import VideoHome from "../../assets/videos/loginVideo.mp4";
 import { Title } from "../../components/title";
@@ -11,7 +11,6 @@ import { useNavigate } from "react-router-dom";
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isDisabled, setIsDisabled] = useState(true);
 
   const navigate = useNavigate();
 

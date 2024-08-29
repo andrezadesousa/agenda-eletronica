@@ -39,6 +39,7 @@ router.post("/login", async (req, res) => {
     };
     let collection = await db.collection("agendaUsers");
     let result = await collection.findOne(newDocument);
+    if (result == null) return res.status(404).send("User not found");
     res.send(result).status(204);
   } catch (err) {
     console.error(err);
