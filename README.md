@@ -13,5 +13,14 @@ Para esse projeto eu estou utilizando as seguintes tecnologias:
 - MongoDB
 - MongoCompass
 - Docker
-  
+
+## 💻 Passos iniciais ?
+- Clonar o repo;
+- Abrir o terminal de backend e frontend;
+- Rodar NPM install dos dois.
+
+## 💻 Como rodar o app versão Docker?
+- Adicionar o arquivo .env na raiz do projeto;
+- No terminal do backend rodar o comando docker compose up (criar o docker)
+
   <img src="https://github.com/andrezadesousa/andreza-portfolio/blob/master/src/images/portfolio.png?raw=true" />
