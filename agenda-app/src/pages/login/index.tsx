@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import VideoHome from "../../assets/videos/loginVideo.mp4";
 import { Title } from "../../components/title";
 import { Input } from "../../components/input";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { PinkButton } from "../../components/pinkButton";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -14,22 +14,33 @@ export const Login = () => {
 
   const navigate = useNavigate();
 
+  // navigation do react por url e state
+  //localStorage um bd no front
+
   const handleSingIn = async () => {
     if (email === "" || password === "") {
       return;
     }
     try {
-      await axios.post("http://localhost:5050/login", {
+      const data = await axios.post("http://localhost:5050/login", {
         email,
         password,
       });
-      navigate("/home");
+      localStorage.setItem("login", JSON.stringify(data.data));
+      navigate("/home", { state: data.data.isAdmin });
     } catch (error) {
       console.log(error);
       localStorage.removeItem("login");
       alert("Dados inválidos ou usuário inexistente");
     }
   };
+
+  useEffect(() => {
+    const login = localStorage.getItem("login");
+    if (login) {
+      return navigate("/home", { state: JSON.parse(login).isAdmin });
+    }
+  }, []);
 
   return (
     <div className="login__container">

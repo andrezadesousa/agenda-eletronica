@@ -6,8 +6,6 @@ import { Register } from "../pages/register";
 import { Home } from "../pages/home";
 import { AddContact } from "../pages/add-contact";
 import { EditContact } from "../pages/edit-contact";
-import PrivateRoute from "./privateRoutes";
-import AuthProvider from "../contexts/authContext";
 
 const RouterApp = () => {
   return (

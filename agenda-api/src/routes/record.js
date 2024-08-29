@@ -21,6 +21,7 @@ router.post("/", async (req, res) => {
     let newDocument = {
       email: req.body.email,
       password: req.body.password,
+      isAdmin: false,
     };
     let collection = await db.collection("agendaUsers");
     let result = await collection.insertOne(newDocument);
@@ -74,26 +75,48 @@ router.get("/list-contacts", async (req, res) => {
   res.send(results).status(200);
 });
 
+//Get contact logic
+router.get("/list-contacts/:id", async (req, res) => {
+  let collection = await db.collection("agendaContacts");
+  let query = { _id: new ObjectId(req.params.id) };
+  let result = await collection.findOne(query);
+  if (!result) return res.send("Not found").status(404);
+  res.send(result).status(200);
+});
+
 //Update contact logic
-// router.patch("/update-contact/:id", async (req, res) => {
-//   try {
-//     const query = { _id: new ObjectId(req.params.id) };
-//     const updates = {
-//       $set: {
-//         name: req.body.name,
-//         address: req.body.address,
-//         phone: req.body.phone,
-//         email: req.body.email,
-//       },
-//     };
-//     let collection = await db.collection("agendaContacts");
-//     let result = await collection.updateOne(query, updates);
-//     res.send(result).status(200);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).send("Error updating contact");
-//   }
-// });
+router.patch("/update-contact/:id", async (req, res) => {
+  try {
+    const query = { _id: new ObjectId(req.params.id) };
+    const updates = {
+      $set: {
+        name: req.body.name,
+        address: req.body.address,
+        phone: req.body.phone,
+        email: req.body.email,
+      },
+    };
+    let collection = await db.collection("agendaContacts");
+    let result = await collection.updateOne(query, updates);
+    res.send(result).status(200);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error updating contact");
+  }
+});
+
+// This section will help you delete a record
+router.delete("/delete-contact/:id", async (req, res) => {
+  try {
+    const query = { _id: new ObjectId(req.params.id) };
+    const collection = db.collection("agendaContacts");
+    let result = await collection.deleteOne(query);
+    res.send(result).status(200);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error deleting record");
+  }
+});
 
 // BASE  DE COMO FAZER
 
@@ -125,21 +148,6 @@ router.patch("/:id", async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).send("Error updating record");
-  }
-});
-
-// This section will help you delete a record
-router.delete("/:id", async (req, res) => {
-  try {
-    const query = { _id: new ObjectId(req.params.id) };
-
-    const collection = db.collection("records");
-    let result = await collection.deleteOne(query);
-
-    res.send(result).status(200);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Error deleting record");
   }
 });
 

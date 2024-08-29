@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 
 import AvatarImage from "../../assets/images/boy-white-headphones.png";
@@ -44,6 +44,13 @@ export const AddContact = () => {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    const login = localStorage.getItem("login");
+    if (!login) {
+      return navigate("/");
+    }
+  });
   return (
     <section className="addContact__section">
       <div className="addContact__header">

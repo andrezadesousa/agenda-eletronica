@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
 
@@ -22,17 +22,24 @@ export const Register = () => {
 
   const handleSignUp = async () => {
     try {
-      await axios.post("http://localhost:5050/", {
+      const data = await axios.post("http://localhost:5050/", {
         email,
         password,
       });
+      localStorage.setItem("login", JSON.stringify(data.data));
       navigate("/");
       setClear();
-      alert("Cadastrado com sucesso!");
     } catch (error) {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    const login = localStorage.getItem("login");
+    if (login) {
+      return navigate("/home", { state: JSON.parse(login).isAdmin });
+    }
+  }, []);
 
   return (
     <div className="register__container">

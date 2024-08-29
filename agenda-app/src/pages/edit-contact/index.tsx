@@ -1,15 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 
 import AvatarImage from "../../assets/images/boy-yellow-headphones.png";
 import { Input } from "../../components/input";
 
 import Favicon from "../../assets/icon/icon.svg";
-import { Link } from "react-router-dom";
+import {
+  Link,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import { PinkButton } from "../../components/pinkButton";
 import { Form } from "../../components/form";
+import axios from "axios";
 
 export const EditContact = () => {
+  const [name, setName] = useState("");
+  const [address, setAddress] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const parametros = useParams();
+  const navigate = useNavigate();
+
+  const handleGetContact = async () => {
+    try {
+      const data = await axios.get(
+        `http://localhost:5050/list-contacts/${parametros.id}`,
+        {}
+      );
+      console.log(data.data);
+      setName(data.data.name);
+      setAddress(data.data.address);
+      setPhone(data.data.phone);
+      setEmail(data.data.email);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    const login = localStorage.getItem("login");
+    if (!login) {
+      return navigate("/");
+    }
+    handleGetContact();
+  }, [parametros.id]);
+
+  const handleEditContact = async () => {
+    try {
+      await axios.patch(
+        `http://localhost:5050/update-contact/${parametros.id}`,
+        {
+          name,
+          address,
+          phone,
+          email,
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <section className="editContact__section">
       <div className="editContact__header">
@@ -38,6 +91,8 @@ export const EditContact = () => {
               type="text"
               icon="ri-user-line"
               id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             <Input
               title="Endereço"
@@ -45,6 +100,8 @@ export const EditContact = () => {
               type="text"
               icon="ri-map-pin-line"
               id="address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
             />
             <Input
               title="Telefone"
@@ -52,6 +109,8 @@ export const EditContact = () => {
               type="text"
               icon="ri-phone-line"
               id="phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
             <Input
               title="E-mail"
@@ -59,9 +118,16 @@ export const EditContact = () => {
               type="email"
               icon="ri-mail-line"
               id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </Form>
-          <PinkButton title="Atualizar" onClick={() => {}} />
+          <PinkButton
+            title="Atualizar"
+            onClick={() => {
+              handleEditContact();
+            }}
+          />
         </div>
       </div>
     </section>
