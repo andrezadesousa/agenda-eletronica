@@ -15,7 +15,7 @@ const router = express.Router();
 
 const app = express();
 
-// This section will help you create a new record.
+// Create user logic
 router.post("/", async (req, res) => {
   try {
     let newDocument = {
@@ -27,10 +27,11 @@ router.post("/", async (req, res) => {
     res.send(result).status(204);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error adding record");
+    res.status(500).send("Error adding agendaUsers");
   }
 });
 
+// Login logic
 router.post("/login", async (req, res) => {
   try {
     let newDocument = {
@@ -43,10 +44,29 @@ router.post("/login", async (req, res) => {
     res.send(result).status(204);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error adding record");
+    res.status(500).send("Error adding agendaUsers");
   }
 });
 
+// New contact logic
+router.post("/add-contact", async (req, res) => {
+  try {
+    let newDocument = {
+      name: req.body.name,
+      address: req.body.address,
+      phone: req.body.phone,
+      email: req.body.email,
+    };
+    let collection = await db.collection("agendaContacts");
+    let result = await collection.insertOne(newDocument);
+    res.send(result).status(204);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error adding agendaContacts");
+  }
+});
+
+// BASE  DE COMO FAZER
 // This section will help you get a list of all the records.
 router.get("/", async (req, res) => {
   let collection = await db.collection("records");

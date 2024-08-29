@@ -13,12 +13,12 @@ export const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   const setClear = () => {
     setEmail("");
     setPassword("");
   };
-
-  const navigate = useNavigate();
 
   const handleSignUp = async () => {
     try {
