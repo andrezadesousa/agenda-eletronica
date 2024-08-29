@@ -1,7 +1,7 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
+import "dotenv/config";
 
-const uri =
-  "mongodb+srv://andrezanascimentodesousa:p4rWhCFcJhSAloJY@agenda.xdhcl.mongodb.net/?retryWrites=true&w=majority&appName=agenda";
+const uri = process.env.ATLAS_CONNECTION;
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
