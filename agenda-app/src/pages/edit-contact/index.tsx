@@ -63,6 +63,10 @@ export const EditContact = () => {
     }
   };
 
+  const logout = () => {
+    localStorage.removeItem("login");
+  };
+
   return (
     <section className="editContact__section">
       <div className="editContact__header">
@@ -71,7 +75,7 @@ export const EditContact = () => {
         <Link to="/home" className="home__link">
           Vizualisar lista de contatos
         </Link>
-        <Link to="/" className="home__link">
+        <Link to="/" className="home__link" onClick={logout}>
           Sair
         </Link>
       </div>

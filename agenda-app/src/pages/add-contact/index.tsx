@@ -51,6 +51,11 @@ export const AddContact = () => {
       return navigate("/");
     }
   });
+
+  const logout = () => {
+    localStorage.removeItem("login");
+  };
+
   return (
     <section className="addContact__section">
       <div className="addContact__header">
@@ -59,7 +64,7 @@ export const AddContact = () => {
         <Link to="/home" className="home__link">
           Vizualisar lista de contatos
         </Link>
-        <Link to="/" className="home__link">
+        <Link to="/" className="home__link" onClick={logout}>
           Sair
         </Link>
       </div>
