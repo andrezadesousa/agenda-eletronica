@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
 
 import Favicon from "../../assets/icon/favicon.svg";
@@ -18,13 +18,17 @@ export const Register = () => {
     setPassword("");
   };
 
+  const navigate = useNavigate();
+
   const handleSignUp = async () => {
     try {
       await axios.post("http://localhost:5050/", {
         email,
         password,
       });
+      navigate("/");
       setClear();
+      alert("Cadastrado com sucesso!");
     } catch (error) {
       console.log(error);
     }

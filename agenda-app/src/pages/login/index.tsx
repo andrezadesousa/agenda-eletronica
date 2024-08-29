@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./index.css";
 import VideoHome from "../../assets/videos/loginVideo.mp4";
 import { Title } from "../../components/title";
 import { Input } from "../../components/input";
 import { Link } from "react-router-dom";
 import { PinkButton } from "../../components/pinkButton";
-import { Form } from "../../components/form";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  const navigate = useNavigate();
+
+  const handleSingIn = async () => {
+    if (email === "" || password === "") {
+      return;
+    }
+    try {
+      await axios.post("http://localhost:5050/login", {
+        email,
+        password,
+      });
+      navigate("/home");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="login__container">
       <video className="login__video" src={VideoHome} autoPlay loop muted />
@@ -17,13 +39,15 @@ export const Login = () => {
           Olá, essa será sua agenda eletrônica, onde poderá gerenciar seus
           contatos de forma dinamica.{" "}
         </p>
-        <Form id="form-login">
+        <form className="form" id="form-login">
           <Input
             title="E-mail"
             placeholder="email@gmail.com"
             type="email"
             icon="ri-mail-line"
             id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <Input
             title="Sua senha"
@@ -31,9 +55,12 @@ export const Login = () => {
             type="password"
             icon="ri-lock-line"
             id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
-        </Form>
-        <PinkButton title="Entrar" onClick={() => {}} />
+        </form>
+
+        <PinkButton title="Entrar" onClick={() => handleSingIn()} />
         <div className="login__footer">
           <p className="login__footer__text">
             Ainda não possui uma conta?{" "}
