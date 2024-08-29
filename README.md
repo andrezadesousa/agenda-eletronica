@@ -7,11 +7,11 @@
 ## 🧪 Tecnologias
 
 Para esse projeto eu estou utilizando as seguintes tecnologias:
-- [ReactJS](https://react.dev/learn)
-- [NodeJs](https://mui.com)
-- [Remix Icon](https://remixicon.com)
-- [MongoDB](https://firebase.google.com/?hl=pt-br)
-- [MongoCompass](https://firebase.google.com/?hl=pt-br)
-- [Docker](https://firebase.google.com/?hl=pt-br)
+- ReactJS
+- NodeJs
+- Remix Icon
+- MongoDB
+- MongoCompass
+- Docker
   
   <img src="https://github.com/andrezadesousa/andreza-portfolio/blob/master/src/images/portfolio.png?raw=true" />
