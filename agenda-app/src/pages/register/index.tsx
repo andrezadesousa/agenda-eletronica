@@ -27,7 +27,7 @@ export const Register = () => {
         password,
       });
       localStorage.setItem("login", JSON.stringify(data.data));
-      navigate("/");
+      navigate("/home", { state: data.data.isAdmin });
       setClear();
     } catch (error) {
       console.log(error);

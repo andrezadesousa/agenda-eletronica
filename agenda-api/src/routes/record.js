@@ -18,13 +18,21 @@ const app = express();
 // Create user logic
 router.post("/", async (req, res) => {
   try {
-    let newDocument = {
+    let collection = await db.collection("agendaUsers");
+    const hasUser = await collection.find({}).toArray();
+    if (hasUser.length === 0) {
+      const resultAdmin = await collection.insertOne({
+        email: req.body.email,
+        password: req.body.password,
+        isAdmin: true,
+      });
+      return res.send(resultAdmin).status(204);
+    }
+    let result = await collection.insertOne({
       email: req.body.email,
       password: req.body.password,
       isAdmin: false,
-    };
-    let collection = await db.collection("agendaUsers");
-    let result = await collection.insertOne(newDocument);
+    });
     res.send(result).status(204);
   } catch (err) {
     console.error(err);

@@ -1,4 +1,3 @@
-import { React, useEffect, useState } from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 import { Login } from "../pages/login";
@@ -15,7 +14,7 @@ const RouterApp = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/sign-up" element={<Register />} />
         <Route path="/criar-contato" element={<AddContact />} />
-        <Route path="/editar-contato/:id" element={<EditContact />} />
+        <Route path="/editar-contato/" element={<EditContact />} />
       </Routes>
     </BrowserRouter>
   );

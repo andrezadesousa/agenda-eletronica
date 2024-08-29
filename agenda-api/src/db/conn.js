@@ -15,5 +15,7 @@ try {
 }
 
 let db = client.db("agenda");
+client.db("agenda").createCollection("agendaUsers");
+client.db("agenda").createCollection("agendaContacts");
 
 export default db;
