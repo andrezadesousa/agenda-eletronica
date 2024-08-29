@@ -26,6 +26,8 @@ export const Login = () => {
       navigate("/home");
     } catch (error) {
       console.log(error);
+      localStorage.removeItem("login");
+      alert("Dados inválidos ou usuário inexistente");
     }
   };
 
