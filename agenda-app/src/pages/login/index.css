@@ -2,7 +2,6 @@
   display: grid;
   width: 100%;
   gap: 2rem;
-  height: 100vh;
 }
 
 .login__video {
@@ -34,6 +33,7 @@
 @media screen and (min-width: 1150px) {
   .login__container {
     grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
   }
 
   .login__content {

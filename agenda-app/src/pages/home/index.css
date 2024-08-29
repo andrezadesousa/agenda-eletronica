@@ -141,6 +141,21 @@
   font-size: 1rem;
 }
 
+.avatar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 30%;
+  background-color: #fce2ce;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 450px) {
+  .avatar {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1150px) {
   .home__header {
     padding: 1rem 3rem;
@@ -171,13 +186,4 @@
     width: 20%;
     height: 60px;
   }
-}
-
-.avatar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  opacity: 30%;
-  background-color: #fce2ce;
-  border-radius: 50%;
 }

@@ -54,7 +54,6 @@ export const Home = () => {
 
   return (
     <section className="home__section">
-      <img src={AvatarImage} className="avatar" />
       <div className="home__container">
         <div className="home__header">
           <img src={Favicon} alt="logo" />
@@ -101,6 +100,7 @@ export const Home = () => {
           ))}
         </div>
       </div>
+      <img src={AvatarImage} className="avatar" />
     </section>
   );
 };
