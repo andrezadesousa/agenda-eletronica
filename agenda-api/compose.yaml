@@ -17,12 +17,14 @@ services:
       NODE_ENV: ATLAS_CONNECTION
     ports:
       - "5050:5050"
+    depends_on:
+      - mongo
   mongo:
     container_name: mongo-dev
     image: mongo:4.2
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_DATABASE: auth
+      MONGO_INITDB_DATABASE: agenda
       MONGO_INITDB_ROOT_PASSWORD: pass
     ports:
       - "27017:27017"

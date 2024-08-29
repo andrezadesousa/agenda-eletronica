@@ -1,15 +1,8 @@
-import { MongoClient, ServerApiVersion } from "mongodb";
+import { MongoClient } from "mongodb";
 import "dotenv/config";
 
 const uri = process.env.ATLAS_CONNECTION;
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-    useUnifiedTopology: true,
-  },
-});
+const client = new MongoClient(uri);
 
 try {
   // Connect the client to the server
@@ -21,6 +14,6 @@ try {
   console.error(err);
 }
 
-let db = client.db("employees");
+let db = client.db("agenda");
 
 export default db;
