@@ -66,13 +66,14 @@ router.post("/add-contact", async (req, res) => {
   }
 });
 
-// BASE  DE COMO FAZER
-// This section will help you get a list of all the records.
-router.get("/", async (req, res) => {
-  let collection = await db.collection("records");
+//List all contacts logic
+router.get("/list-contacts", async (req, res) => {
+  let collection = await db.collection("agendaContacts");
   let results = await collection.find({}).toArray();
   res.send(results).status(200);
 });
+
+// BASE  DE COMO FAZER
 
 // This section will help you get a single record by id
 router.get("/:id", async (req, res) => {

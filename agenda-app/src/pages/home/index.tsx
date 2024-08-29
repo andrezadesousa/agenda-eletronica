@@ -1,0 +1,69 @@
+import React, { useEffect, useState } from "react";
+
+import "./index.css";
+
+import Favicon from "../../assets/icon/icon.svg";
+import { Link } from "react-router-dom";
+import AvatarImage from "../../assets/images/boy-yellow-headphones.png";
+
+import axios from "axios";
+export const Home = () => {
+  const [contacts, setContacts] = useState([]);
+  const handleListContacts = async () => {
+    try {
+      const data = await axios.get("http://localhost:5050/list-contacts", {});
+      setContacts(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    handleListContacts();
+  }, []);
+
+  return (
+    <section className="home__section">
+      <img src={AvatarImage} className="avatar" />
+      <div className="home__container">
+        <div className="home__header">
+          <img src={Favicon} alt="logo" />
+          <p>Sua agenda eletrônica</p>
+          <Link to="/criar-contato" className="home__link">
+            Crie um novo contato
+          </Link>
+          <Link to="/" className="home__link">
+            Sair
+          </Link>
+        </div>
+        <div className="home__table">
+          <h1 className="home__table-title">Agenda Eletrônica</h1>
+          <div className="home__table-header">
+            <h1>Nome</h1>
+            <h1>Endereço</h1>
+            <h1>Telefone</h1>
+            <h1>E-mail</h1>
+          </div>
+          {contacts.map((contact: any) => (
+            <div className="home__table-body">
+              <div className="home__table-contact">
+                <h1>{contact.name}</h1>
+                <h1>{contact.address}</h1>
+                <h1>{contact.phone}</h1>
+                <h1>{contact.email}</h1>
+              </div>
+              <div className="home__table-actions">
+                <button className="delete__btn">
+                  <i className="ri-delete-bin-line delete"></i>
+                </button>
+                <Link to={"/editar-contato"} className="update__btn">
+                  <i className="ri-pencil-line update"></i>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
