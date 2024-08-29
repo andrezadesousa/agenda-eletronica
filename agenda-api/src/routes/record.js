@@ -70,8 +70,30 @@ router.post("/add-contact", async (req, res) => {
 router.get("/list-contacts", async (req, res) => {
   let collection = await db.collection("agendaContacts");
   let results = await collection.find({}).toArray();
+  console.log(results);
   res.send(results).status(200);
 });
+
+//Update contact logic
+// router.patch("/update-contact/:id", async (req, res) => {
+//   try {
+//     const query = { _id: new ObjectId(req.params.id) };
+//     const updates = {
+//       $set: {
+//         name: req.body.name,
+//         address: req.body.address,
+//         phone: req.body.phone,
+//         email: req.body.email,
+//       },
+//     };
+//     let collection = await db.collection("agendaContacts");
+//     let result = await collection.updateOne(query, updates);
+//     res.send(result).status(200);
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).send("Error updating contact");
+//   }
+// });
 
 // BASE  DE COMO FAZER
 

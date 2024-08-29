@@ -39,10 +39,11 @@
 }
 
 .addContact__container {
-  padding-block: 10rem 2rem;
-  display: grid;
   width: 100%;
-  gap: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column-reverse;
+  padding-block: 6.6rem 2rem;
 }
 
 .addContact__form {
@@ -84,6 +85,7 @@
   }
 
   .addContact__container {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-block: 6.6rem 0;
     align-content: center;

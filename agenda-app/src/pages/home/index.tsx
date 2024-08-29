@@ -45,7 +45,7 @@ export const Home = () => {
             <h1>E-mail</h1>
           </div>
           {contacts.map((contact: any) => (
-            <div className="home__table-body">
+            <div className="home__table-body" key={contact.id}>
               <div className="home__table-contact">
                 <h1>{contact.name}</h1>
                 <h1>{contact.address}</h1>
@@ -56,7 +56,10 @@ export const Home = () => {
                 <button className="delete__btn">
                   <i className="ri-delete-bin-line delete"></i>
                 </button>
-                <Link to={"/editar-contato"} className="update__btn">
+                <Link
+                  to={`/editar-contato/${contact.id}`}
+                  className="update__btn"
+                >
                   <i className="ri-pencil-line update"></i>
                 </Link>
               </div>

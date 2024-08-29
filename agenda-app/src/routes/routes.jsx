@@ -17,7 +17,7 @@ const RouterApp = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/sign-up" element={<Register />} />
         <Route path="/criar-contato" element={<AddContact />} />
-        <Route path="/editar-contato" element={<EditContact />} />
+        <Route path="/editar-contato/:id" element={<EditContact />} />
       </Routes>
     </BrowserRouter>
   );
