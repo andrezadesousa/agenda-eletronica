@@ -18,6 +18,13 @@ export const EditContact = () => {
   const parametros = useParams();
   const navigate = useNavigate();
 
+  const setClear = () => {
+    setName("");
+    setAddress("");
+    setPhone("");
+    setEmail("");
+  };
+
   const handleGetContact = async () => {
     try {
       const data = await axios.get(
@@ -53,6 +60,8 @@ export const EditContact = () => {
           email,
         }
       );
+      navigate("/home");
+      setClear();
     } catch (error) {
       console.log(error);
     }

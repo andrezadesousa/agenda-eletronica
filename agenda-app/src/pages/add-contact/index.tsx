@@ -39,7 +39,6 @@ export const AddContact = () => {
       });
       navigate("/home");
       setClear();
-      alert("Cadastrado com sucesso!");
     } catch (error) {
       console.log(error);
     }
